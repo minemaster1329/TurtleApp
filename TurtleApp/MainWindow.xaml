@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TurtleApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" MinHeight="450" MinWidth="800" ResizeMode="CanResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -17,6 +17,10 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -30,13 +34,22 @@
         <Label Content="Choose function from list:" HorizontalAlignment="Center" Margin="0,5,0,5" Grid.Row="1" Width="180"/>
         <ComboBox Grid.Row="2" Margin="10,9,10,9" Name="ChooseFunctionComboBox">
             <ComboBoxItem IsSelected="True" Name="DefaultSelectedFunction">Choose function.</ComboBoxItem>
-            <ComboBoxItem Name="Function1">Function 1.</ComboBoxItem>
-            <ComboBoxItem Name="Function2">Function 2.</ComboBoxItem>
-            <ComboBoxItem Name="Function3">Function 3.</ComboBoxItem>
-            <ComboBoxItem Name="Function4">Function 4.</ComboBoxItem>
+            <ComboBoxItem Name="Task_A1">Task A1</ComboBoxItem>
+            <ComboBoxItem Name="Task_A2">Task A2</ComboBoxItem>
+            <ComboBoxItem Name="Task_A3">Task A3</ComboBoxItem>
+            <ComboBoxItem Name="Task_A4">Task A4</ComboBoxItem>
+            <ComboBoxItem Name="Task_A5">Task A5</ComboBoxItem>
+            <ComboBoxItem Name="Task_A6">Task A6</ComboBoxItem>
+            <ComboBoxItem Name="Task_A7">Task A7</ComboBoxItem>
+            <ComboBoxItem Name="Task_A8">Task A8</ComboBoxItem>
+            <ComboBoxItem Name="Task_A9">Task A9</ComboBoxItem>
         </ComboBox>
-        <Button Content="Draw" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Height="40" Width="180" Margin="0,0,0,10" Name="DrawButon"/>
-        <Button Content="Clear" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Bottom" Height="40" Width="180" Margin="0,0,0,10" Name="ClearButton"/>
-        <CheckBox Content="AnimatedDrawing" Grid.Row="5" Margin="10,10,10,10" IsChecked="False"/>
+        <Button Content="Draw" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="40" Width="180" Margin="0,10,0,0" Name="DrawButon" Click="DrawButon_Click"/>
+        <Button Content="Clear" Grid.Row="4" Margin="10,10,10,10" Name="ClearButton" Click="ClearButton_Click"/>
+        <local:TurtleCanvas Grid.Column="1" Margin="10,10,10,10" Grid.RowSpan="10" x:Name="TurtleCanvas" Grid.Row="1"/>
+        <Label Content="Side Lenght" Grid.Row="5" Margin="10,7,10,7"/>
+        <TextBox Grid.Row="6" Text="100" TextWrapping="Wrap" Margin="10,10,10,10" Name="SideLenghtTxtb"/>
+        <Label Content="Iterations Number" Grid.Row="7" Margin="10,7,10,7"/>
+        <TextBox Grid.Row="8" Text="2" TextWrapping="Wrap" Margin="10,10,10,10" Name="IterCountTxtb"/>
     </Grid>
 </Window>

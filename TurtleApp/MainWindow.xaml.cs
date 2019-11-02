@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TurtleApp
 {
@@ -27,8 +15,8 @@ namespace TurtleApp
 
         private void DrawButon_Click(object sender, RoutedEventArgs e)
         {
-            int iterCount = 0;
-            double sideLenght = 0.0;
+            int iterCount;
+            double sideLenght;
 
             if (!Int32.TryParse(IterCountTxtb.Text, out iterCount) || iterCount < 1)
             {
@@ -39,6 +27,7 @@ namespace TurtleApp
             if (!Double.TryParse(SideLenghtTxtb.Text, out sideLenght) || sideLenght < 0)
             {
                 MessageBox.Show("Invalid input format. Side lenght must be in double format and greater than 0.");
+                return;
             }
 
             TurtleCanvas.ClearCanvas();
@@ -215,11 +204,13 @@ namespace TurtleApp
 
         private void TaskA9(int iter, double sideLen)
         {
-            if (iter == 0) return;
-            TurtleCanvas.Right(90);
-            TurtleCanvas.Forward(sideLen);
-            TurtleCanvas.Left(180);
-            TaskA9(iter - 1, sideLen + 10);
+            if (iter <= 0) return;
+            for (int a = 0; a < 4; a++)
+            {
+                TurtleCanvas.Forward(sideLen * (iter - a));
+                TurtleCanvas.Left(90);
+            }
+            TaskA9(iter - 4, sideLen);
         }
     }
 }

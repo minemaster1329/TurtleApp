@@ -16,6 +16,7 @@ namespace TurtleApp
     public partial class TurtleCanvas : UserControl
     {
         public enum TurtlePos { TopLeft, TopCenter, TopRight, MiddleLeft, MiddleCenter, MiddleRight, BottomLeft, BottomCenter, BottomRight };
+        public enum TurtleOrientation { ToTop, ToBottom, ToLeft, ToRight};
         Point turtlePos;
         TurtlePos turtleDefaultPos;
         double rotation;
@@ -126,6 +127,28 @@ namespace TurtleApp
             }
 
             turtleDefaultPos = newPos;
+        }
+
+        public void SetTurtleOrientation(TurtleOrientation turtleOrientation)
+        {
+            switch (turtleOrientation)
+            {
+                case TurtleOrientation.ToBottom:
+                    rotation = 270;
+                    break;
+
+                case TurtleOrientation.ToLeft:
+                    rotation = 180;
+                    break;
+
+                case TurtleOrientation.ToRight:
+                    rotation = 0;
+                    break;
+
+                case TurtleOrientation.ToTop:
+                    rotation = 90;
+                    break;
+            }
         }
     }
 }

@@ -43,13 +43,31 @@
             <ComboBoxItem Name="Task_A7">Task A7</ComboBoxItem>
             <ComboBoxItem Name="Task_A8">Task A8</ComboBoxItem>
             <ComboBoxItem Name="Task_A9">Task A9</ComboBoxItem>
+            <ComboBoxItem Name="Task_A10">Task A10</ComboBoxItem>
+            <ComboBoxItem Name="Task_A11">Task A11</ComboBoxItem>
+            <ComboBoxItem Name="Task_A12">Task A12</ComboBoxItem>
+            <ComboBoxItem Name="Task_A13">Task A13</ComboBoxItem>
+            <ComboBoxItem Name="Task_B1">Task B1</ComboBoxItem>
+            <ComboBoxItem Name="Task_B2">Task B2</ComboBoxItem>
+            <ComboBoxItem Name="Task_B3">Task B3</ComboBoxItem>
+            <ComboBoxItem Name="Task_B4">Task B4</ComboBoxItem>
+            <ComboBoxItem Name="Task_B5">Task B5</ComboBoxItem>
+            <ComboBoxItem Name="Task_B6">Task B6</ComboBoxItem>
+            <ComboBoxItem Name="Task_B7">Task B7</ComboBoxItem>
+            <ComboBoxItem Name="Task_B8">Task B8</ComboBoxItem>
+            <ComboBoxItem Name="Task_C1">Task C1</ComboBoxItem>
+            <ComboBoxItem Name="Task_C2">Task C2</ComboBoxItem>
+            <ComboBoxItem Name="Task_C3">Task C3</ComboBoxItem>
+            <ComboBoxItem Name="Task_C4">Task C4</ComboBoxItem>
+            <ComboBoxItem Name="Task_C5">Task C5</ComboBoxItem>
+            <ComboBoxItem Name="Task_C6">Task C6</ComboBoxItem>
         </ComboBox>
         <Button Content="Draw" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Height="40" Width="180" Margin="0,10,0,0" Name="DrawButon" Click="DrawButon_Click"/>
         <Button Content="Clear" Grid.Row="4" Margin="10,10,10,10" Name="ClearButton" Click="ClearButton_Click"/>
         <local:TurtleCanvas Grid.Column="1" Margin="10,10,10,10" Grid.RowSpan="10" x:Name="TurtleCanvas" Grid.Row="1"/>
         <Label Content="Side Lenght" Grid.Row="5" Margin="10,7,10,7"/>
         <TextBox Grid.Row="6" Text="100" TextWrapping="Wrap" Margin="10,10,10,10" Name="SideLenghtTxtb"/>
-        <Label Content="Iterations Number" Grid.Row="7" Margin="10,7,10,7"/>
+        <Label Content="Minimum Lenght" Grid.Row="7" Margin="10,7,10,7"/>
         <TextBox Grid.Row="8" Text="2" TextWrapping="Wrap" Margin="10,10,10,10" Name="IterCountTxtb"/>
     </Grid>
 </Window>
